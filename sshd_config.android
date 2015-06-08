@@ -1,0 +1,8 @@
+# Minimal OpenSSH daemon configuration for CyanogenMod 10.1+
+# Port 2222
+AuthorizedKeysFile /data/.ssh/authorized_keys
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+PermitRootLogin without-password
+Subsystem sftp internal-sftp
+pidfile /data/ssh/sshd.pid
