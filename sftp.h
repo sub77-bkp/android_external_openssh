@@ -83,6 +83,10 @@
 #define SSH2_FXE_STATVFS_ST_RDONLY	0x00000001
 #define SSH2_FXE_STATVFS_ST_NOSUID	0x00000002
 
+/* xattr@openssh.com flags */
+#define SSH2_FXE_XATTR_CREATE		0x00000001
+#define SSH2_FXE_XATTR_REPLACE		0x00000002
+
 /* status messages */
 #define SSH2_FX_OK			0
 #define SSH2_FX_EOF			1
@@ -93,7 +97,12 @@
 #define SSH2_FX_NO_CONNECTION		6
 #define SSH2_FX_CONNECTION_LOST		7
 #define SSH2_FX_OP_UNSUPPORTED		8
-#define SSH2_FX_MAX			8
+#define SSH2_FX_ENOATTR                 9
+#define SSH2_FX_ENOSPC                 10
+#define SSH2_FX_ENOTSUP                11
+#define SSH2_FX_ERANGE                 12
+#define SSH2_FX_EMSGSIZE               13
+#define SSH2_FX_MAX		       13
 
 struct passwd;
 
